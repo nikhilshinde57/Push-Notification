@@ -1,0 +1,25 @@
+{
+  "name": "rabbitmq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Niks",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.2.0",
+    "mongodb-autoincrement": "^1.0.1",
+    "mongoose": "^5.0.9",
+    "mongoose-auto-increment": "^5.0.1",
+    "path": "^0.12.7",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4"
+  }
+}

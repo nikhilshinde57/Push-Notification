@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+    <h1 id="h1Id" >Hello Nikhil</h1>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB5E-UIFzlaa3IS1vQ3Ickr3XXNEUyTYUY",
+    authDomain: "niksapp-166308.firebaseapp.com",
+    databaseURL: "https://niksapp-166308.firebaseio.com",
+    projectId: "niksapp-166308",
+    storageBucket: "niksapp-166308.appspot.com",
+    messagingSenderId: "899813328928"
+  };
+  firebase.initializeApp(config);
+
+  var h1= document.getElementById("h1Id").value();
+  var dbref = firebase.database().ref().child('text');
+  dbref.on('value',snap =>h1.innerText = snap.val());
+
+</script>
+</body>
+</html>
