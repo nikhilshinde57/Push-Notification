@@ -83,7 +83,7 @@ To run this project, make sure following setups you have installed on your machi
 - Install RabbitMQ from [here](https://www.rabbitmq.com/install-windows.html).
 - Check your RabbitMQ service is working or not by just hit this [http://localhost:15672/#/](http://localhost:15672/%23/%20) URL on your local web browser. If it is working you will get below web page in response.
 
--
+
 	![]( App%20Server/img/RabbitMQLoginPage.PNG)
 - Once you see above web page just login with guest account and create the
 - Install MongoDB database from [here](https://www.mongodb.com/mongodb-4.0/).
