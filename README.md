@@ -26,16 +26,16 @@ So, to implement push notification service we need one application service who i
 
 **How RabbitMQ is used in this project:**
 
-1. 1Its exchanges are used to send one message or notification to the multiple queues those are having binding with them.
-2. 2Every user having its separate queue i.e. single queue represents the customer or user
-3. 3Channel represents the exchange i.e. when new channel created that time create the new exchange with that channel name.
-4. 4When user subscribe to the channel that time just create the binding between the exchange and the user queue.
-5. 5All exchanges are fan out exchanges means when message published to that channel it will send to all queue those are having binding with that exchange.
+1. It's exchanges are used to send one message or notification to the multiple queues those are having binding with them.
+2. Every user having its separate queue i.e. single queue represents the customer or user
+3. Channel represents the exchange i.e. when new channel created that time create the new exchange with that channel name.
+4. When user subscribe to the channel that time just create the binding between the exchange and the user queue.
+5. All exchanges are fan out exchanges means when message published to that channel it will send to all queue those are having binding with that exchange.
 
 **How MongoDB is used in this project:**
 
-1. 1The MongoDB is used to store the user information and to maintain the list of subscriber list against the channel.
-2. 2User Entity:
+1. The MongoDB is used to store the user information and to maintain the list of subscriber list against the channel.
+2. User Entity:
 
 {
 
@@ -63,7 +63,7 @@ So, to implement push notification service we need one application service who i
 
 }
 
-1. 3Channel entity:
+1. Channel entity:
 
 {
 
@@ -100,7 +100,7 @@ Before running the app server and notification server make sure your RabbitMQ an
 - This will start your notification server and on console you can see below message.
 
 ![]( App%20Server/img/ScreenShot1.PNG)
-
+2
 Note: You can change the port number for that refer the config file.
 
 **Step 2:**
@@ -491,7 +491,7 @@ Status code: 200 OK
 
 Now to check how it will work when the user is offline. Once again subscribe to the coke\_studi channel using testuser1 user.
 
-Then logout the user using logout API. Now admin will publsihn one new notification to coke\_studi channel. Now the testuser1 is subscribed to the channel and the user is offline then the testuser1 queue will hold that message till the user will come online.
+Then logout the user using logout API. Now admin will publish one new notification to coke\_studi channel. Now the testuser1 is subscribed to the channel and the user is offline then the testuser1 queue will hold that message till the user will come online.
 
 Now login in with the testuser1 account and look at the app server and notification server terminal windows you can see the previous message published by the admin when testuser1 was offline.
 
