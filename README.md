@@ -34,7 +34,7 @@ So, to implement push notification service we need one application service who i
 
 **How MongoDB is used in this project:**
 
-1. The MongoDB is used to store the user information and to maintain the list of subscriber list against the channel.
+1. The MongoDB is used to store the user information and to maintain the list of subscriber against the channel.
 2. User Entity:
 
 {
